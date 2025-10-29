@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/FKzA500.png" alt="dotclaude logo"></a>
+ <img width=200px height=200px src="https://i.imgur.com/ZG0iECp.png" alt="dotclaude logo"></a>
 </p>
 
 <h3 align="center">dotclaude-templates</h3>
