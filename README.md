@@ -64,6 +64,7 @@ xcopy .claude /path/to/your/project/.claude/ /E /I
 ## 📚 Documentation
 
 - **[Custom Agent Command Guide](docs/custom-agent.doc.md)** - Complete guide to creating custom agents with the `/custom-agent` command
+- **[Hooks Guide](docs/hooks-guide.md)** - Understanding and configuring hooks in `.claude/settings.json` for automated workflows
 
 ---
 
