@@ -1,0 +1,14 @@
+{
+    "hooks": {
+      "UserPromptSubmit": [
+        {
+          "hooks": [
+            {
+              "type": "command",
+              "command": "echo '{\"additionalContext\": \"Before starting any task, ask clarifying questions to ensure you fully understand the requirements. Do not make assumptions.\"}'"
+            }
+          ]
+        }
+      ]
+    }
+  }
