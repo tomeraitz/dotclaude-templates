@@ -24,45 +24,6 @@ Invoke this skill automatically after completing ANY frontend task:
 - Form implementations
 - Navigation changes
 
-## Admin Login Process
-
-When testing admin-only features (e.g., admin dashboard, tutorial management, post management), you must first authenticate as an admin user.
-
-### Getting Test Credentials
-
-Read the `.env` file in the project root to get test credentials:
-```
-TEST_USER_EMAIL=<email from .env>
-TEST_USER_PASSWORD=<password from .env>
-```
-
-### Login Flow
-
-```
-1. browser_navigate → http://localhost:3000/auth/sign-in
-2. browser_snapshot → Verify sign-in form is displayed
-3. browser_type → Enter email in email field (ref for email input)
-4. browser_type → Enter password in password field (ref for password input)
-5. browser_click → Click "Sign In" button
-6. browser_wait_for → Wait for redirect (URL should change to dashboard or intended page)
-7. browser_snapshot → Verify logged in state (user menu visible, etc.)
-```
-
-### Example Admin Flow
-
-```
-1. Login as admin (follow login flow above)
-2. browser_navigate → http://localhost:3000/admin/tutorials / http://localhost:3000/admin/posts
-3. browser_snapshot → Verify admin tutorials page loads
-4. Proceed with admin-specific testing...
-```
-
-### Notes
-
-- Admin pages typically redirect to sign-in if not authenticated
-- After successful login, the session persists for subsequent navigations
-- If you get redirected to sign-in unexpectedly, re-run the login flow
-
 ## Verification Process
 
 ### Step 1: Navigate to the Relevant Page
