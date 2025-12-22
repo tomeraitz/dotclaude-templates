@@ -29,7 +29,7 @@ Invoke this skill automatically after completing ANY frontend task:
 ### Step 1: Navigate to the Relevant Page
 ```
 Use browser_navigate to open the page where changes were made.
-Example: browser_navigate → http://localhost:3000/[relevant-path]
+Example: browser_navigate → http://localhost:<port>/[relevant-path]
 ```
 
 ### Step 2: Execute the User Flow
@@ -146,7 +146,7 @@ Before marking task complete:
 
 ### Login Form Verification
 ```
-1. browser_navigate → http://localhost:3000/login
+1. browser_navigate → http://localhost:<port>/login
 2. browser_snapshot → Verify form elements exist
 3. browser_type → Enter email in email field
 4. browser_type → Enter password in password field
@@ -159,7 +159,7 @@ Before marking task complete:
 ### Debugging a Bug
 ```
 1. Add console.log statements to suspect code areas
-2. browser_navigate → http://localhost:3000/[page]
+2. browser_navigate → http://localhost:<port>/[page]
 3. Execute the actions that trigger the bug
 4. browser_console_messages level="debug" → Read all logs
 5. Analyze output to identify root cause
@@ -171,7 +171,7 @@ Before marking task complete:
 
 ### Button Click Verification
 ```
-1. browser_navigate → http://localhost:3000/[page]
+1. browser_navigate → http://localhost:<port>/[page]
 2. browser_snapshot → Locate the button element
 3. browser_click → Click the button
 4. browser_wait_for → Wait for expected change
@@ -181,7 +181,7 @@ Before marking task complete:
 
 ### Form Submission Verification
 ```
-1. browser_navigate → http://localhost:3000/[form-page]
+1. browser_navigate → http://localhost:<port>/[form-page]
 2. browser_fill_form → Fill all form fields
 3. browser_click → Submit form
 4. browser_wait_for → Wait for success/error message
