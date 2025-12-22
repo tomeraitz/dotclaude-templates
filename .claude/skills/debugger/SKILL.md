@@ -102,10 +102,9 @@ Use `browser_console_messages` to read ALL console output for debugging:
 
 **If issues found:**
 1. Report each error/warning with message
-2. Add console.logs if needed to understand the root cause
-3. Fix the issue in code
-4. Remove debug logs
-5. Re-run verification
+2. List all issues found
+3. **Wait for user approval before fixing**
+4. Only after approval: fix issues, remove debug logs, re-verify
 
 ### Step 5: Capture Evidence
 
@@ -138,9 +137,9 @@ Before marking task complete:
 **If verification fails:**
 1. Document the exact error/failure
 2. Analyze root cause
-3. Fix the issue in code
-4. Re-run verification flow
-5. Repeat until all checks pass
+3. **Present list of issues to user**
+4. **Wait for user approval before fixing**
+5. After approval: fix issues and re-run verification
 
 **Common issues:**
 - Hydration errors (SSR/CSR mismatch)
@@ -207,11 +206,15 @@ Tested flow: [brief description]
 
 **Fail:**
 ```
-Verification failed: [specific error]
-Fixing now...
-[After fix] Re-verified: [feature] now works correctly.
+Verification failed. Issues found:
+1. [Issue 1 description]
+2. [Issue 2 description]
+...
+
+Should I proceed with fixing these issues?
 ```
 
 ## Important
 
-**Never skip verification.** Every frontend change must be validated before being considered complete.
+- **Never skip verification.** Every frontend change must be validated before being considered complete.
+- **Never auto-fix issues.** Always present a list of issues and wait for user approval before making any fixes.
