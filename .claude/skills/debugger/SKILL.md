@@ -26,13 +26,21 @@ Invoke this skill automatically after completing ANY frontend task:
 
 ## Verification Process
 
-### Step 1: Navigate to the Relevant Page
+### Step 1: Start Frontend Server
+```
+1. Verify the port is active (check if server is already running)
+2. If active → continue to next step
+3. If not active → run server with "npm start"
+4. Wait for server to be ready before proceeding
+```
+
+### Step 2: Navigate to the Relevant Page
 ```
 Use browser_navigate to open the page where changes were made.
 Example: browser_navigate → http://localhost:<port>/[relevant-path]
 ```
 
-### Step 2: Execute the User Flow
+### Step 3: Execute the User Flow
 
 Use these Playwright MCP tools to simulate user interactions:
 
@@ -46,7 +54,7 @@ Use these Playwright MCP tools to simulate user interactions:
 | `browser_press_key` | Keyboard input (Enter, Tab, Escape) |
 | `browser_wait_for` | Wait for text/elements to appear |
 
-### Step 3: Monitor and Debug with Console
+### Step 4: Monitor and Debug with Console
 
 Use `browser_console_messages` to read ALL console output for debugging:
 
@@ -99,13 +107,13 @@ Use `browser_console_messages` to read ALL console output for debugging:
 4. Remove debug logs
 5. Re-run verification
 
-### Step 4: Capture Evidence
+### Step 5: Capture Evidence
 
 - `browser_snapshot` - Get accessibility tree (preferred for LLM analysis)
 - `browser_take_screenshot` - Visual documentation when needed
 - `browser_network_requests` - Monitor API calls if relevant
 
-### Step 5: Verify Expected Behavior
+### Step 6: Verify Expected Behavior
 
 Confirm:
 - UI elements render correctly
