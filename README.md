@@ -66,6 +66,7 @@ xcopy .claude /path/to/your/project/.claude/ /E /I
 - **[Custom Agent Command Guide](docs/custom-agent.doc.md)** - Complete guide to creating custom agents with the `/custom-agent` command
 - **[Hooks Guide](docs/hooks-guide.md)** - Understanding and configuring hooks in `.claude/settings.json` for automated workflows
 - **[Debugger Skill Guide](docs/debugger-skill.md)** - Verify frontend changes using Playwright MCP
+- **[Create Plan Command](docs/create-plan.md)** - Generate structured implementation plans with multi-agent review
 
 ---
 
